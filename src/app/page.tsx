@@ -1,9 +1,15 @@
+'use client'
 import Image from 'next/image'
 import Header from '@/app/_components/Header'
 import Footer from '@/app/_components/Footer'
 import Profile from '@/app/_components/Profile'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 export default function Home() {
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  })
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-gray-500">
       <main className="flex flex-col gap-8 row-start-2 items-center">
@@ -11,7 +17,12 @@ export default function Home() {
         <Profile />
 
         {/* first section */}
-        <div className="flex items-stretch justify-between bg-gray text-white p-10 rounded-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} // 초기 상태 (밑에서 위로)
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }} // 스크롤 시 요소가 위로 올라오며 나타남
+          transition={{ duration: 0.5 }}
+          className="flex items-stretch justify-between bg-gray text-white p-10 rounded-xl"
+        >
           <div className="w-2/5">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <Image
@@ -32,10 +43,16 @@ export default function Home() {
               She will do the best she could to stand up for you.
             </h1>
           </div>
-        </div>
+        </motion.div>
 
         {/* second section */}
-        <div className="flex items-stretch justify-between bg-gray text-white p-10 rounded-xl">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 100 }} // 초기 상태 (밑에서 위로)
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }} // 스크롤 시 요소가 위로 올라오며 나타남
+          transition={{ duration: 0.5 }}
+          className="flex items-stretch justify-between bg-gray text-white p-10 rounded-xl"
+        >
           {/* left */}
           <div className="max-w-md border-t-4 border-b-4 border-double p-6 flex items-center justify-center">
             <h2 className="text-2xl leading-tight">
@@ -63,10 +80,15 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* third section */}
-        <div className="flex items-stretch justify-between bg-gray text-white p-10 rounded-xl">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }} // 초기 상태 (밑에서 위로)
+          animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 100 }} // 스크롤 시 요소가 위로 올라오며 나타남
+          transition={{ duration: 0.5 }}
+          className="flex items-stretch justify-between bg-gray text-white p-10 rounded-xl"
+        >
           <div className="w-2/5">
             <div className="rounded-lg overflow-hidden shadow-lg">
               <Image
@@ -84,7 +106,7 @@ export default function Home() {
               Be the happiest guy on earth giving her a warm cuddle. <br />
             </h1>
           </div>
-        </div>
+        </motion.div>
 
         {/* purchase info section */}
         <div className="flex flex-col items-center justify-center bg-gray text-white p-10 rounded-xl">
