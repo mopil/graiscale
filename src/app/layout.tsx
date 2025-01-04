@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Graiscale | A Leading Crypto Asset AI MEME',
   description: 'GRAISCALE LABS',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
