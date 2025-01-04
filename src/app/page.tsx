@@ -109,9 +109,11 @@ export default function Home() {
           <div>Join our Communities</div>
           <div className="p-3 flex gap-4">
             <a href="https://x.com/graiscalegirl" target="_blank" className="">
-              <img
+              <Image
                 src="/x_icon.png"
                 alt="X Icon"
+                width={200}
+                height={200}
                 className="w-10 h-10 mr-2 rounded-full shadow-2xl"
               />
             </a>
@@ -120,9 +122,11 @@ export default function Home() {
               target="_blank"
               className=""
             >
-              <img
+              <Image
                 src="/telegram_icon.png"
-                alt="X Icon"
+                alt="Telegram Icon"
+                width={200}
+                height={200}
                 className="w-10 h-10 mr-2 rounded-full shadow-2xl"
               />
             </a>
