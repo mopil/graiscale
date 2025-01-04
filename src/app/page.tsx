@@ -97,12 +97,18 @@ export default function Home() {
             Take a chance with a cute girl!
           </div>
           <div className="text-2xl text-white p-4 border-t-4 border-b-4 border-double">
-            CA : TBA
+            CA : 7fDMRMfpZTft1LGMXjZh65naiVYQ9CkEuTysg4Lepump
           </div>
           <div className="p-4">
-            <button className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 hover:opacity-80 border rounded p-2 text-4xl">
-              TRADE NOW
-            </button>
+            <a
+              href="https://pump.fun/coin/7fDMRMfpZTft1LGMXjZh65naiVYQ9CkEuTysg4Lepump"
+              target="_blank"
+              className=""
+            >
+              <button className="bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 hover:opacity-80 border rounded p-2 text-4xl">
+                TRADE NOW
+              </button>
+            </a>
           </div>
           <div>Join our Communities</div>
           <div className="p-3 flex gap-4">
