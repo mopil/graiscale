@@ -45,7 +45,7 @@ export default function Home() {
               </span>{' '}
               <br />
               <span>
-                She Loves everything in this planet except Jeeters who don't
+                She Loves everything in this planet except Jeeters who do not
                 believe her and left her.{' '}
               </span>
             </h2>
