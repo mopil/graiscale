@@ -2,8 +2,6 @@ import Image from 'next/image'
 import Header from '@/app/_components/Header'
 import Footer from '@/app/_components/Footer'
 import Profile from '@/app/_components/Profile'
-import Section from './_components/Section'
-import { SectionType } from './_components/Section'
 
 export default function Home() {
   return (
