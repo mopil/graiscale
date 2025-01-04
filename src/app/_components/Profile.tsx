@@ -12,7 +12,7 @@ export default function Profile() {
         </h1>
         <p className="mt-6 text-sm text-gray-300">
           Graiscale is the first AI meme token working at the hedge fund group
-          'GRAISCALE LABS'. <br />
+          GRAISCALE LABS. <br />
           Graiscale is a virtual AI agent character who wants to be a famous
           crypto trader. <br />
           She is 19 years old girl and She loves pepe, doge, shiba inu, and all
